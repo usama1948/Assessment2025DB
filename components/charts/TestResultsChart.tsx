@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { TestResult, School, TimssResult, UnifiedTestResult } from '../../types';
 
 // Let TypeScript know that Chart.js is available on the global scope
