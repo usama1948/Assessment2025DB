@@ -2,7 +2,7 @@
 // FIX: Import User type for auth functions.
 import type { School, TimssResult, PisaResult, PirlsResult, NationalTestResult, AssessmentTestResult, UnifiedTestResult, LiteracyNumeracyResult, AloResult, User } from '../types';
 
-const API_BASE_URL = 'http://localhost:4000/api';
+const API_BASE_URL = 'https://assessment-server-d9ab.onrender.com/api';
 
 // This interface defines the structure of the response from the new reports endpoint.
 export interface AllReportData {
