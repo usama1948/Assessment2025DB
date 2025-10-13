@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { SpinnerIcon } from '../components/icons/SpinnerIcon';
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -69,8 +70,9 @@ const LoginPage: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 disabled:bg-slate-400 transition"
+              className="w-full flex items-center justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 disabled:bg-slate-400 transition"
             >
+              {loading && <SpinnerIcon className="animate-spin ml-3 h-5 w-5 text-white" />}
               {loading ? 'جارِ التحقق...' : 'تسجيل الدخول'}
             </button>
           </div>
