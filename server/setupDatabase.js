@@ -100,7 +100,15 @@ async function setupDatabase() {
             table.timestamp('dateAdded').defaultTo(knex.fn.now());
         });
         console.log('✅ Table managed_users created successfully!');
+    } else {
+        console.log('👍 Table managed_users already exists.');
+    }
 
+    // **FIX: Separate logic to ensure the admin user always exists.**
+    // This now runs regardless of whether the table was just created or already existed.
+    console.log('🔄 Checking for initial admin user...');
+    const adminUser = await knex('managed_users').where({ username: 'admin' }).first();
+    if (!adminUser) {
         console.log('🌱 Seeding initial admin user...');
         await knex('managed_users').insert({
             username: 'admin',
@@ -109,7 +117,7 @@ async function setupDatabase() {
         });
         console.log('🌳 Initial admin user seeded.');
     } else {
-        console.log('👍 Table managed_users already exists.');
+        console.log('👍 Initial admin user already exists.');
     }
 
 
