@@ -44,7 +44,7 @@ const AppContent: React.FC = () => {
         <header className="mb-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="text-center sm:text-right">
-                    <h1 className="text-4xl font-bold text-sky-700">نظام إدارة المدارس</h1>
+                    <h1 className="text-4xl font-bold text-sky-700">نظام إدارة الاختبارات في مدارس وكالة الغوث</h1>
                     <p className="text-slate-500 mt-2">إدارة شاملة لبيانات المدارس ونتائج الاختبارات في قاعدة بيانات مركزية.</p>
                 </div>
                 {user && (
