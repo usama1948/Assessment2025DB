@@ -82,7 +82,7 @@ const AppContent: React.FC = () => {
         </main>
 
         <footer className="text-center mt-12 text-sm text-slate-400">
-            <p>تم التصميم بواسطة مهندس React خبير.</p>
+            <p>تم التصميم بواسطة أسامة React بو سليم.</p>
         </footer>
       </div>
     </div>
